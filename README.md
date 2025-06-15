@@ -2,7 +2,7 @@
 
 ## Description  
 This notebook focuses on building a classification model to predict loan defaults based on customer demographic and financial information. The project involves data exploration, preprocessing, feature engineering, and training multiple models to identify high-risk loan applicants and reduce financial risk for lenders.  
-**[Dataset Source – (custom or Kaggle-based)]**
+**[Dataset Source](https://www.kaggle.com/datasets/adarshsng/lending-club-loan-data-csv/data)**
 
 ## Objectives  
 - Analyze borrower data to uncover patterns associated with loan defaults  

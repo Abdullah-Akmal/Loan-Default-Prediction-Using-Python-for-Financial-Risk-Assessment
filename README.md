@@ -1,12 +1,12 @@
 # Loan-Default-Prediction-Using-Python-for-Financial-Risk-Assessment
 
 ## Problem Statement  
-The objective of this project is to predict whether a loan applicant will default ("Charged Off") or fully repay ("Fully Paid") based on demographic and financial attributes. This enables financial institutions to reduce default risk, improve credit assessment processes, and enhance lending profitability using data-driven decision-making.
+Financial institutions face the challenge of accurately assessing credit risk to minimize loan defaults while maintaining lending profitability. Traditional credit evaluation methods can overlook complex nonlinear relationships among borrower attributes, leading to suboptimal decision-making. This project leverages Lending Club loan data to predict whether an applicant will default ("Charged Off") or fully repay (“Fully Paid”) based on demographic and financial features. By applying advanced feature engineering, handling class imbalance with SMOTE, and training interpretable machine learning models (LightGBM, XGBoost, Random Forest), the goal is to deliver a robust, data-driven solution that enhances credit assessment processes, reduces default rates, and supports strategic lending decisions.
 
 ---
 
 ## Tools Used  
-- Python Libraries: `pandas`, `numpy`, `seaborn`, `matplotlib`, `scikit-learn`, `imblearn (SMOTE)`, `xgboost`, `lightgbm`, `shap`  
+- Python Libraries: pandas, numpy, seaborn, matplotlib, scikit-learn, imblearn (SMOTE), xgboost, lightgbm,   
 - Data Source: [Lending Club Loan Data (Kaggle)](https://www.kaggle.com/datasets/adarshsng/lending-club-loan-data-csv/data)
 
 ---
@@ -25,7 +25,7 @@ The objective of this project is to predict whether a loan applicant will defaul
 
 **Data Preparation**  
 - Loaded approximately 1.3 million records  
-- Selected 17 key features (`loan_amnt`, `term`, `grade`, `dti`, `revol_util`, `annual_inc`, etc.)  
+- Selected 17 key features (loan_amnt, term, grade, dti, revol_util, annual_inc, etc.)  
 - Filtered dataset to include:  
   - "Fully Paid" (80%)  
   - "Charged Off" (20%)  
@@ -38,14 +38,14 @@ The objective of this project is to predict whether a loan applicant will defaul
 
 **Visual Insights**  
 - Histograms and bar plots highlighted class imbalance  
-- Correlation heatmap showed strong relationship between `loan_amnt` and `installment` (correlation = 0.95)
+- Correlation heatmap showed strong relationship between loan_amnt and installment (correlation = 0.95)
 
 ---
 
 ### 2. Feature Engineering & Preprocessing  
-- Converted `loan_status` to a binary target variable  
+- Converted loan_status to a binary target variable  
 - Addressed class imbalance using SMOTE  
-- Scaled numeric features using `MinMaxScaler`  
+- Scaled numeric features using MinMaxScaler  
 - Split dataset into 80:20 training and test sets  
 
 ---
@@ -54,7 +54,7 @@ The objective of this project is to predict whether a loan applicant will defaul
 
 **Models Trained**  
 - LightGBM  
-  - Tuned using `RandomizedSearchCV`  
+  - Tuned using RandomizedSearchCV  
   - ROC-AUC: 0.75, Accuracy: 87%  
 - XGBoost  
   - Tuned for precision-recall optimization  
@@ -68,10 +68,10 @@ The objective of this project is to predict whether a loan applicant will defaul
   - "Fully Paid": Precision = 90%, Recall = 94%  
 - ROC Curves: Compared model trade-offs  
 - SHAP Values: Key predictors of default included:  
-  - High `revol_util`  
-  - Low `annual_inc`  
-  - High `dti`  
-  - Poor `grade`  
+  - High revol_util  
+  - Low annual_inc  
+  - High dti  
+  - Poor grade  
 
 ---
 
